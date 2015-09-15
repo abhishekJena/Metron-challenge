@@ -1,0 +1,30 @@
+package common;
+
+//import java.util.Iterator;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class JavaTest {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter No. of Strings : ");
+		int num = in.nextInt();
+		TreeSet<String> set = new TreeSet<String>();
+		for(int i=0; i<num; i++){
+			set.add(in.next());
+		}
+		
+		System.out.println("Non-duplicate and sorted String are : ");
+		/*Iterator<String> it = set.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}*/
+		for(String s: set){
+			System.out.println(s);
+		}
+		if(in != null)
+			in.close();
+	}
+
+}
